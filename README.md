@@ -42,7 +42,7 @@ PRs or Issues are deeply welcomed.
 
 ## Changelogs  
 
-- **[v2.0.0]**  
+- **[v2.0.1]**  
   + fix the dimensions module error.  
   + fix the keys warning when render dots.
 
