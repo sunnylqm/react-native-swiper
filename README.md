@@ -42,9 +42,9 @@ PRs or Issues are deeply welcomed.
 
 ## Changelogs  
 
-- **[v2.0.0]**
-  fix the dimensions module error.  
-  fix the keys warning when render dots.
+- **[v2.0.0]**  
+  + fix the dimensions module error.  
+  + fix the keys warning when render dots.
 
 - **[v1.3.0]**
   + [8d6d75c](https://github.com/leecade/react-native-swiper/commit/8d6d75c00edf87b603c218aad0018932277814b5) inject `state` in ScrollResponders (@thanks [@smothers](https://github.com/smothers)).
