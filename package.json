@@ -1,28 +1,21 @@
 {
-  "name": "react-native-swiper",
+  "name": "react-native-swiper2",
   "keywords": [
     "react-component",
     "react-native",
     "ios"
   ],
-  "version": "1.3.0",
-  "description": "Swiper component for React Native.",
-  "main": "dist/index.js",
-  "scripts": {
-    "start": "node_modules/.bin/babel src --out-dir dist",
-    "watch": "node_modules/.bin/babel src --out-dir dist --watch"
-  },
+  "version": "2.0.0",
+  "description": "Swiper component for React Native. Supersede react-native-swiper",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leecade/react-native-swiper.git"
+    "url": "git+https://github.com/sunnylqm/react-native-swiper2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leecade/react-native-swiper/issues"
+    "url": "https://github.com/sunnylqm/react-native-swiper2/issues"
   },
-  "homepage": "https://github.com/leecade/react-native-swiper#readme",
-  "devDependencies": {
-    "babel": "^5.1.11"
-  }
+  "homepage": "https://github.com/sunnylqm/react-native-swipe2#readme"
 }
