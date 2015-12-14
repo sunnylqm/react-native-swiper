@@ -3,6 +3,9 @@
 react-native-swiper
 
 @author leecade<leecade@163.com>
+
+react-native-swiper2
+@author sunnylqm
  */
 import React, {
   StyleSheet,
@@ -10,6 +13,7 @@ import React, {
   View,
   ScrollView,
   TouchableOpacity,
+  Dimensions
 } from 'react-native'
 
 // Using bare setTimeout, setInterval, setImmediate
@@ -18,7 +22,6 @@ import React, {
 // the component is unmounted, you risk the callback
 // throwing an exception.
 import TimerMixin from 'react-timer-mixin'
-import Dimensions from 'Dimensions'
 
 let { width, height } = Dimensions.get('window')
 
@@ -333,9 +336,7 @@ export default React.createClass({
     if(this.state.total <= 1) return null
 
     let dots = []
-    for(let i = 0; i < this.state.total; i++) {
-      dots.push(i === this.state.index
-        ? (this.props.activeDot || <View style={{
+    let ActiveDot = this.props.activeDot || <View style={{
             backgroundColor: '#007aff',
             width: 8,
             height: 8,
@@ -344,8 +345,8 @@ export default React.createClass({
             marginRight: 3,
             marginTop: 3,
             marginBottom: 3,
-          }} />)
-        : (this.props.dot || <View style={{
+          }} />;
+    let Dot = this.props.dot || <View style={{
             backgroundColor:'rgba(0,0,0,.2)',
             width: 8,
             height: 8,
@@ -354,7 +355,10 @@ export default React.createClass({
             marginRight: 3,
             marginTop: 3,
             marginBottom: 3,
-          }} />)
+          }} />;
+    for(let i = 0; i < this.state.total; i++) {
+      dots.push(i === this.state.index
+        ? <ActiveDot key={i} /> : <Dot key={i} />
       )
     }
 

@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/sunnylqm/react-native-swiper2/issues"
   },
-  "homepage": "https://github.com/sunnylqm/react-native-swipe2#readme"
+  "homepage": "https://github.com/sunnylqm/react-native-swipe2#readme",
+  "dependencies": {
+    "react-timer-mixin": "^0.13.3"
+  }
 }

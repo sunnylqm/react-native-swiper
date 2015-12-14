@@ -1,13 +1,16 @@
-# react-native-swiper
+# react-native-swiper2
 
-[![npm version](http://img.shields.io/npm/v/react-native-swiper.svg?style=flat-square)](https://npmjs.org/package/react-native-swiper "View this project on npm")
-[![npm version](http://img.shields.io/npm/dm/react-native-swiper.svg?style=flat-square)](https://npmjs.org/package/react-native-swiper "View this project on npm")
-[![Issue Stats](http://issuestats.com/github/leecade/react-native-swiper/badge/pr?style=flat-square)](https://github.com/leecade/react-native-swiper/pulls?q=is%3Apr+is%3Aclosed)
-[![Issue Stats](http://issuestats.com/github/leecade/react-native-swiper/badge/issue?style=flat-square)](https://github.com/leecade/react-native-swiper/issues?q=is%3Aissue+is%3Aclosed)
+[![npm version](http://img.shields.io/npm/v/react-native-swiper2.svg?style=flat-square)](https://npmjs.org/package/react-native-swiper2 "View this project on npm")
 
 ![logo](http://i.imgur.com/P4cRUgD.png)
 
-The best Swiper component for React Native.
+Based on react-native-swiper, which was the best Swiper component for React Native.  
+
+However for some reason, react-native-swiper didn't update for long time, and can not run on recent react native versions.  
+
+So I forked this `react-native-swiper2`, and would maintain it as long as I could.  
+
+PRs or Issues are deeply welcomed.
 
 ## Feature & TODO
 
@@ -37,7 +40,11 @@ The best Swiper component for React Native.
 
 - [x] State inject
 
-## Changelogs
+## Changelogs  
+
+- **[v2.0.0]**
+  fix the dimensions module error.  
+  fix the keys warning when render dots.
 
 - **[v1.3.0]**
   + [8d6d75c](https://github.com/leecade/react-native-swiper/commit/8d6d75c00edf87b603c218aad0018932277814b5) inject `state` in ScrollResponders (@thanks [@smothers](https://github.com/smothers)).
@@ -101,7 +108,7 @@ The best Swiper component for React Native.
 ### Installation
 
 ```bash
-$ npm i react-native-swiper --save
+$ npm i react-native-swiper2 --save
 ```
 
 ### Basic Usage
@@ -121,9 +128,9 @@ $ react-native init myproject
 - Then, edit `myproject/index.ios.js`, like this:
 
 ```jsx
-var Swiper = require('react-native-swiper')
+var Swiper = require('react-native-swiper2')
 // es6
-// import Swiper from 'react-native-swiper'
+// import Swiper from 'react-native-swiper2'
 
 var React = require('react-native');
 var {
@@ -294,10 +301,10 @@ $ npm start
 
 ## Contribution
 
-- [@leecade](mailto:leecade@163.com) The main author.
+- [@leecade](mailto:leecade@163.com) The main author of the original version .
 
 ## Questions
 
-Feel free to [contact me](mailto:leecade@163.com) or [create an issue](https://github.com/leecade/react-native-swiper/issues/new)
+Feel free to [create an issue](https://github.com/sunnylqm/react-native-swiper2/issues/new)
 
 > Inspired by [nolimits4web/Swiper](https://github.com/nolimits4web/swiper/) & Design material from [Dribbble](https://dribbble.com/) & made with ♥.
