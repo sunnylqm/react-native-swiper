@@ -46,7 +46,7 @@ let styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
 
-  pagination_x: {
+  pagination: {
     position: 'absolute',
     bottom: 25,
     left: 0,
@@ -58,17 +58,6 @@ let styles = StyleSheet.create({
     backgroundColor:'transparent',
   },
 
-  pagination_y: {
-    position: 'absolute',
-    right: 15,
-    top: 0,
-    bottom: 0,
-    flexDirection: 'column',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor:'transparent',
-  },
 
   title: {
     height: 30,
@@ -290,7 +279,7 @@ export default React.createClass({
     }
 
     return (
-      <View pointerEvents='none' style={[styles['pagination_' + this.state.dir], this.props.paginationStyle]}>
+      <View pointerEvents='none' style={[styles.pagination, this.props.paginationStyle]}>
         {dots}
       </View>
     )
