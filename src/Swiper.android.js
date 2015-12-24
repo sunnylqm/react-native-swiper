@@ -116,6 +116,7 @@ export default React.createClass({
     autoplayDirection                : React.PropTypes.bool,
     index                            : React.PropTypes.number,
     renderPagination                 : React.PropTypes.func,
+    onPageChanged                    : React.PropTypes.func,
   },
 
   mixins: [TimerMixin],
@@ -223,6 +224,8 @@ export default React.createClass({
       index: page - 1,
     });
     this.autoplay();
+
+    this.props.onPageChanged && this.props.onPageChanged(this.state.index);
   },
 
   renderScrollView(pages) {
@@ -331,6 +334,7 @@ export default React.createClass({
      'onTouchStart',
      'onTouchEnd',
      'onResponderRelease',
+     'onPageChanged',
      ]*/
 
     for(let prop in props) {
@@ -339,6 +343,7 @@ export default React.createClass({
         && prop !== 'onMomentumScrollEnd'
         && prop !== 'renderPagination'
         && prop !== 'onScrollBeginDrag'
+        && prop !== 'onPageChanged'
       ) {
         let originResponder = props[prop]
         props[prop] = (e) => originResponder(e, this.state, this)
