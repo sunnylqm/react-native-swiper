@@ -42,6 +42,9 @@ PRs or Issues are deeply welcomed.
 
 ## Changelogs  
 
+- **[v2.0.3]**  
+  + support pagination on android.
+
 - **[v2.0.2]**  
   + add simple support for android.
 
