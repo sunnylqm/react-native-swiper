@@ -187,7 +187,6 @@ export default React.createClass({
   },
 
   autoplay(){
-    console.log("Sould autoplay?");
     if(!this.props.autoplay
       || this.state.autoplayEnd) return;
     console.log("Will autoplay.");
@@ -209,13 +208,11 @@ export default React.createClass({
 
   onPageScroll(ev){
     let page = ev.nativeEvent.position;
-    if (this.props.loop){
+    if (this.props.loop && this.state.total > 1){
       if (page + ev.nativeEvent.offset <= 0){
-        console.log("Here");
         page = this.state.total;
         this.viewPager && this.viewPager.setPageWithoutAnimation(page);
       } else if(page+ev.nativeEvent.offset >= this.state.total+1){
-        console.log("Here");
         page = 1;
         this.viewPager && this.viewPager.setPageWithoutAnimation(page);
       }
