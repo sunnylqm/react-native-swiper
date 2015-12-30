@@ -116,6 +116,7 @@ export default React.createClass({
     autoplayDirection                : React.PropTypes.bool,
     index                            : React.PropTypes.number,
     renderPagination                 : React.PropTypes.func,
+    onPageChanged                    : React.PropTypes.func,
   },
 
   mixins: [TimerMixin],
@@ -186,7 +187,6 @@ export default React.createClass({
   },
 
   autoplay(){
-    console.log("Sould autoplay?");
     if(!this.props.autoplay
       || this.state.autoplayEnd) return;
     console.log("Will autoplay.");
@@ -207,22 +207,28 @@ export default React.createClass({
   },
 
   onPageScroll(ev){
+    const hasLoop = this.props.loop && this.state.total > 1;
+    const lastPage = this.state.index + (hasLoop ? 1 : 0);
+
     let page = ev.nativeEvent.position;
-    if (this.props.loop){
+    if (hasLoop){
+      // do Loop
       if (page + ev.nativeEvent.offset <= 0){
-        console.log("Here");
         page = this.state.total;
         this.viewPager && this.viewPager.setPageWithoutAnimation(page);
       } else if(page+ev.nativeEvent.offset >= this.state.total+1){
-        console.log("Here");
         page = 1;
         this.viewPager && this.viewPager.setPageWithoutAnimation(page);
       }
     }
-    this.setState({
-      index: page - 1,
-    });
     this.autoplay();
+
+    if (page != lastPage){
+      this.setState({
+        index: page - 1,
+      });
+      this.props.onPageChanged && this.props.onPageChanged(this.state.index);
+    }
   },
 
   renderScrollView(pages) {
@@ -331,6 +337,7 @@ export default React.createClass({
      'onTouchStart',
      'onTouchEnd',
      'onResponderRelease',
+     'onPageChanged',
      ]*/
 
     for(let prop in props) {
@@ -339,6 +346,7 @@ export default React.createClass({
         && prop !== 'onMomentumScrollEnd'
         && prop !== 'renderPagination'
         && prop !== 'onScrollBeginDrag'
+        && prop !== 'onPageChanged'
       ) {
         let originResponder = props[prop]
         props[prop] = (e) => originResponder(e, this.state, this)
