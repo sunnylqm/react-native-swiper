@@ -207,8 +207,12 @@ export default React.createClass({
   },
 
   onPageScroll(ev){
+    const hasLoop = this.props.loop && this.state.total > 1;
+    const lastPage = this.state.index + (hasLoop ? 1 : 0);
+
     let page = ev.nativeEvent.position;
-    if (this.props.loop && this.state.total > 1){
+    if (hasLoop){
+      // do Loop
       if (page + ev.nativeEvent.offset <= 0){
         page = this.state.total;
         this.viewPager && this.viewPager.setPageWithoutAnimation(page);
@@ -217,12 +221,14 @@ export default React.createClass({
         this.viewPager && this.viewPager.setPageWithoutAnimation(page);
       }
     }
-    this.setState({
-      index: page - 1,
-    });
     this.autoplay();
 
-    this.props.onPageChanged && this.props.onPageChanged(this.state.index);
+    if (page != lastPage){
+      this.setState({
+        index: page - 1,
+      });
+      this.props.onPageChanged && this.props.onPageChanged(this.state.index);
+    }
   },
 
   renderScrollView(pages) {
