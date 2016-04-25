@@ -12,34 +12,6 @@ So I forked this `react-native-swiper2`, and would maintain it as long as I coul
 
 PRs or Issues are deeply welcomed.
 
-## Feature & TODO
-
-- [ ] More switch effects
-
-- [ ] Unit tests
-
-- [ ] Check typo
-
-- [x] Infinite loop
-
-- [x] Direction control
-
-- [x] Complete custom style
-
-- [x] Allow title display & custom
-
-- [x] Multiple instances
-
-- [x] Custom container size
-
-- [x] Control buttons
-
-- [x] Autoplay
-
-- [x] Custom pagination style
-
-- [x] State inject
-
 ## Changelogs  
 
 - **[v2.0.5]**  
@@ -125,10 +97,10 @@ $ npm i react-native-swiper2 --save
 
 ### Basic Usage
 
-- Install `react-native` first
+- Install `react-native-cli` first
 
 ```bash
-$ npm i react-native -g
+$ npm i react-native-cli -g
 ```
 
 - Initialization of a react-native project
