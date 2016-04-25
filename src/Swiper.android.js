@@ -246,6 +246,15 @@ export default React.createClass({
   },
 
   /**
+   * Scroll by index
+   * @param  {number} index offset index
+   */
+  scrollTo(indexOffset) {
+    let newIndex = (this.props.loop ? 1 : 0) + indexOffset + this.state.index
+    this.viewPager && this.viewPager.setPage(newIndex);
+  },
+
+  /**
    * Render pagination
    * @return {object} react-dom
    */
