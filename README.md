@@ -14,8 +14,11 @@ PRs or Issues are deeply welcomed.
 
 ## Changelogs  
 
+- **[v2.0.6]**  
+  + support RN 0.25+. ([@xirc](https://github.com/xirc)).
+
 - **[v2.0.5]**  
-  + add scrollTo for android. (thanks [@LeeChSien](https://github.com/LeeChSien)).
+  + add scrollTo for android. ([@LeeChSien](https://github.com/LeeChSien)).
 
 - **[v2.0.4]**  
   + fix scrollTo warning.
