@@ -226,9 +226,9 @@ export default React.createClass({
 
     if (page != lastPage){
       this.setState({
-        index: page - 1,
+        index: page,
       });
-      this.props.onPageChanged && this.props.onPageChanged(this.state.index);
+      this.props.onPageChanged && this.props.onPageChanged(page);
     }
   },
 

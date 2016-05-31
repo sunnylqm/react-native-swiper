@@ -300,7 +300,7 @@ export default React.createClass({
       offset: offset,
     })
 
-    this.props.onPageChanged && this.props.onPageChanged(this.state.index)
+    this.props.onPageChanged && this.props.onPageChanged(index)
   },
 
   /**
