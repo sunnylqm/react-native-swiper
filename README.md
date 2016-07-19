@@ -4,33 +4,36 @@
 
 ![logo](http://i.imgur.com/P4cRUgD.png)
 
-Based on react-native-swiper, which was the best Swiper component for React Native.  
+Based on react-native-swiper, which was the best Swiper component for React Native.
 
-However for some reason, react-native-swiper didn't update for long time, and can not run on recent react native versions.  
+However for some reason, react-native-swiper didn't update for long time, and can not run on recent react native versions.
 
-So I forked this `react-native-swiper2`, and would maintain it as long as I could.  
+So I forked this `react-native-swiper2`, and would maintain it as long as I could.
 
 PRs or Issues are deeply welcomed.
 
-## Changelogs  
+## Changelogs
 
-- **[v2.0.6]**  
+- **[v2.0.7]**
+  + correct onPageChange index. <https://github.com/sunnylqm/react-native-swiper2/pull/12>
+
+- **[v2.0.6]**
   + support RN 0.25+. ([@xirc](https://github.com/xirc)).
 
-- **[v2.0.5]**  
+- **[v2.0.5]**
   + add scrollTo for android. ([@LeeChSien](https://github.com/LeeChSien)).
 
-- **[v2.0.4]**  
+- **[v2.0.4]**
   + fix scrollTo warning.
 
-- **[v2.0.3]**  
+- **[v2.0.3]**
   + support pagination on android.
 
-- **[v2.0.2]**  
+- **[v2.0.2]**
   + add simple support for android.
 
-- **[v2.0.1]**  
-  + fix the dimensions module error.  
+- **[v2.0.1]**
+  + fix the dimensions module error.
   + fix the keys warning when render dots.
 
 - **[v1.3.0]**
