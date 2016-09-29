@@ -4,13 +4,7 @@
 
 ![logo](http://i.imgur.com/P4cRUgD.png)
 
-Based on react-native-swiper, which was the best Swiper component for React Native.
-
-However for some reason, react-native-swiper didn't update for long time, and can not run on recent react native versions.
-
-So I forked this `react-native-swiper2`, and would maintain it as long as I could.
-
-PRs or Issues are deeply welcomed.
+## [react-native-swiper](https://github.com/leecade/react-native-swiper) is now active again, so swiper2 will stop maintaining.
 
 ## Changelogs
 
